@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# printing "Best School" ten times
+for n in "Best School" "Best School" "Best School" "Best School" "Best School" "Best School" "Best School" "Best School" "Best School" "Best School"
+do
+    echo "$n"
+done
