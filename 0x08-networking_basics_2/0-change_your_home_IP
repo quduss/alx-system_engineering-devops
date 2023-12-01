@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A bash script that changes the ip address of localhost and facebook.com in the /etc/hosts file
+echo -e "127.0.0.2\tlocalhost" >> /etc/hosts
+echo -e "8.8.8.8\tfacebook.com" >> /etc/hosts
