@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Install nginx and returns string "Hello World!" via a GET request
+# (requesting a page) using curl
+
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.html
