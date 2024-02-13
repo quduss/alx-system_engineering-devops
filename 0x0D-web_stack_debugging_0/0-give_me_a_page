@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Restart apache2 web server
+
+/etc/init.d/apache2 restart
