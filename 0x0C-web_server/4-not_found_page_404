@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Install nginx on the server
+# returns string "Hello World!" upon performing a GET request
+# to localhost. Implement a 301 permanent redirect to localhost/redirect_me
+# return an HTTP 404 error code plus a string Ceci n'est pas une page upon
+# requesting an invalid url like localhost/xyz
+
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+echo "server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        root /var/www/html;
+        index index.html;
+
+        location /redirect_me {
+                return 301 https://www.youtube.com;
+        }
+
+        error_page 404 /404.html;
+        location = /404.html {
+                internal;
+        }
+}" > /etc/nginx/sites-available/default
+
+if [ "$(pgrep -c nginx)" -le 0 ]; then
+        service nginx start
+else
+        service nginx restart
+fi
