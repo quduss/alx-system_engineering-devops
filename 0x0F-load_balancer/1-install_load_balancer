@@ -19,4 +19,4 @@ backend myservers
         balance roundrobin
         server 473379-web-01 34.229.186.30:80
         server 473379-web-02 54.146.88.8:80" >> /etc/haproxy/haproxy.cfg
-service haproxy restart
+service haproxy start
