@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Install haproxy on the new ubuntu it is ran on
+# serves as a load balancer that uses round robin to distribute requests
+# to servers 473379-web-01 and 473379-web-02
+
+apt-get -y install --no-install-recommends software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.8
+apt-get -y update
+apt-get -y install haproxy=2.8.\*
+
+echo "ENABLED=1" >> /etc/default/haproxy
+
+echo "
+frontend html
+        bind *:80
+        default_backend myservers
+
+backend myservers
+        balance roundrobin
+        server 473379-web-01 34.229.186.30:80
+        server 473379-web-02 54.146.88.8:80" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
