@@ -6,5 +6,7 @@ This directory contains bash scripts to test knowledge of permissions.
 4. **3-new_owner** - changes the owner of the file `hello` to the user `betty`.
 5. **4-empty** - creates an empty file called `hello`.
 6. **5-execute** - adds execute permission to the owner of the file `hello`.
-7. **6-multiple_permissions** - 
+7. **6-multiple_permissions** - adds execute permission to the owner and the group owner, read permission to other users, to the file `hello`.
+8. **7-everybody** - adds execution permission to the owner, the group owner and the other users, to the file `hello`.
+9. **8-James_Bond** - sets no permissions to owner and group but all permissions to other users to file `hello`.
 
