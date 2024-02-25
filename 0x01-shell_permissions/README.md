@@ -9,4 +9,6 @@ This directory contains bash scripts to test knowledge of permissions.
 7. **6-multiple_permissions** - adds execute permission to the owner and the group owner, read permission to other users, to the file `hello`.
 8. **7-everybody** - adds execution permission to the owner, the group owner and the other users, to the file `hello`.
 9. **8-James_Bond** - sets no permissions to owner and group but all permissions to other users to file `hello`.
-
+10. **9-John_Doe** - sets the mode of file `hello` to `-rwxr-x-wx`.
+11. **10-mirror_permissions** - sets the mode of the file `hello` the same as `olleh’s` mode.
+12. 
