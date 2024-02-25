@@ -10,4 +10,7 @@ This directory contains basic shell scripts
 8. **7-movethatfile** - moves the file `betty` from /tmp/ to /tmp/my_first_directory
 9. **8-firstdelete** - deletes file `betty` in /tmp/my_first_directory
 10. **9-firstdirdeletion** - deletes the directory `my_first_directory` that is in the /tmp directory
-11. 
+11. **10-back** - changes the working directory to the previous one
+12. **11-lists** - lists all files including the hidden ones in the current directory, parent of the working directory and the /boot directory (in this order) in long format
+13. **12-file_type** - prints the type of the file `iamafile` in /tmp
+14. 
