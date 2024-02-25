@@ -11,4 +11,8 @@ This directory contains bash scripts to test knowledge of permissions.
 9. **8-James_Bond** - sets no permissions to owner and group but all permissions to other users to file `hello`.
 10. **9-John_Doe** - sets the mode of file `hello` to `-rwxr-x-wx`.
 11. **10-mirror_permissions** - sets the mode of the file `hello` the same as `olleh’s` mode.
-12. 
+12. **11-directories_permissions** - adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users.
+13. **12-directory_permissions** - creates a directory `my_dir` with permissions `751` in the working directory.
+14. **13-change_group** - changes the group owner to school for the file `hello`.
+15. **100-change_owner_and_group** - changes the owner to `vincent` and the group owner to `staff` for all the files and directories in the working directory.
+16. 
