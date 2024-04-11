@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# A bash script that takes in a domain and possibly a subdomain
+# as arguments. It prints some information about the subdomain provided
+# else prints information about subdomains www, lb-01, web-01 and web-02.
+
+get_ip() {
+    domain=$1
+    subdomain=$2
+    
+    if [[ -z "$subdomain" ]]; then
+        subdomains=("www" "lb-01" "web-01" "web-02")
+    else
+        subdomains=("$subdomain")
+    fi
+
+    for sub in "${subdomains[@]}"; do
+        ip=$(dig +short "$sub.$domain" | awk 'NR==1{print}')
+        if [[ -n "$ip" ]]; then
+            echo "The subdomain $sub is a A record and points to $ip"
+        fi
+    done
+}
+
+get_ip "$1" "$2"
