@@ -13,7 +13,6 @@ mysqldump -u root -p"$PASSWORD" --all-databases > "$DUMP_FILE"
 
 # Check if the dump was successful
 if [ $? -ne 0 ]; then
-    echo "MySQL dump failed. Exiting."
     exit 1
 fi
 
