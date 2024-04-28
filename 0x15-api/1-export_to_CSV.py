@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Gives the todo list of an employee. The id of the employee
+"""Export employee TODO in CSV format. The id of the employee
 is passed as an argument"""
 import requests
 import sys
