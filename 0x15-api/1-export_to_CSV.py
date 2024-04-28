@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Export employee TODO in CSV format. The id of the employee
 is passed as an argument"""
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
