@@ -1,2 +1,2 @@
-0x0B-ssh
+# 0x0B-ssh
 This directory tests understanding of SSH
