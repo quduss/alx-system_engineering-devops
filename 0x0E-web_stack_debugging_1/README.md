@@ -1,2 +1,2 @@
 # 0x0E-web_stack_debugging_1
-This directory tests understanding of how to fix a broken/bugged webstack
+This is the second of the webstack debugging series where broken/bugged webstacks are returned to a working state
