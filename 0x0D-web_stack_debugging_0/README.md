@@ -1,1 +1,1 @@
-First Project of the web stack debugging series
+This directory tests understanding of how to fix a broken/bugged webstack
